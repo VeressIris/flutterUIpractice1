@@ -6,11 +6,11 @@ class DataBlobTextContent extends StatelessWidget {
       required this.icon,
       required this.bigText,
       required this.content,
-      required this.boldText});
+      this.boldText});
   final IconData icon;
   final String bigText;
   final String content;
-  final String boldText;
+  final String? boldText;
 
   @override
   Widget build(BuildContext context) {
@@ -36,8 +36,10 @@ class DataBlobTextContent extends StatelessWidget {
         ),
         Text(content,
             style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500)),
-        Text(boldText,
-            style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+        if (boldText != null)
+          Text(boldText!,
+              style:
+                  const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
       ],
     );
   }
