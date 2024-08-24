@@ -59,8 +59,8 @@ class MainApp extends StatelessWidget {
                   crossAxisCount: 2,
                   mainAxisSpacing: 14,
                   crossAxisSpacing: 14,
-                  children: const [
-                    DataBlob(
+                  children: [
+                    const DataBlob(
                         backgroundColor: Color.fromARGB(255, 255, 154, 98),
                         title: 'TIME',
                         content: DataBlobTextContent(
@@ -70,36 +70,46 @@ class MainApp extends StatelessWidget {
                               'Global avg. read time for your progress 7:28',
                           boldText: '23% faster',
                         )),
-                    DataBlob(
+                    const DataBlob(
                         backgroundColor: Color.fromARGB(255, 182, 242, 106),
                         title: 'STREAK',
                         content: DataBlobTextContent(
-                          icon: Icons.watch_later_outlined,
+                          icon: Icons.bolt_rounded,
                           bigText: '7',
                           content:
                               'Day streak, come back tomorrow to keep it up!',
                           boldText: '19% more consistent',
                         )),
-                    DataBlob(
-                        backgroundColor: Color.fromARGB(255, 255, 154, 98),
-                        title: 'TIME',
+                    const DataBlob(
+                        backgroundColor: Color.fromARGB(255, 201, 159, 255),
+                        title: 'LEVEL',
                         content: DataBlobTextContent(
-                          icon: Icons.watch_later_outlined,
-                          bigText: '6:24',
-                          content:
-                              'Global avg. read time for your progress 7:28',
-                          boldText: '23% faster',
+                          icon: Icons.donut_large_rounded,
+                          bigText: '2',
+                          content: '145 reader points to level up!',
+                          boldText: 'Top 5% for this book',
                         )),
                     DataBlob(
-                        backgroundColor: Color.fromARGB(255, 255, 154, 98),
-                        title: 'TIME',
-                        content: DataBlobTextContent(
-                          icon: Icons.watch_later_outlined,
-                          bigText: '6:24',
-                          content:
-                              'Global avg. read time for your progress 7:28',
-                          boldText: '23% faster',
-                        )),
+                        backgroundColor:
+                            const Color.fromARGB(255, 148, 218, 251),
+                        title: 'BADGES',
+                        content: Expanded(
+                            child: Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: GridView.count(
+                            crossAxisCount: 3,
+                            mainAxisSpacing: 3,
+                            children: const [
+                              Icon(Icons.lightbulb_outline_rounded, size: 32),
+                              Icon(Icons.check_circle_outline_rounded,
+                                  size: 32),
+                              Icon(Icons.star_outline_rounded, size: 32),
+                              Icon(Icons.hourglass_empty_rounded, size: 32),
+                              Icon(Icons.book_outlined, size: 32),
+                              Icon(Icons.thumb_up_alt_outlined, size: 32)
+                            ],
+                          ),
+                        ))),
                   ],
                 ),
               ),
