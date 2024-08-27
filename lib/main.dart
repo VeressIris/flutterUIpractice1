@@ -28,7 +28,7 @@ class MainApp extends StatelessWidget {
                 Padding(
                     padding: const EdgeInsets.only(right: 12),
                     child: Image.network(
-                        'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd28hgpri8am2if.cloudfront.net%2Fbook_images%2Fonix%2Fcvr9781501110368%2Fit-ends-with-us-9781501110368_hr.jpg&f=1&nofb=1&ipt=b6d5bd64cc1c397b9abd1cc6ae00173775d6f025a24808277f41f84eb9e4d558&ipo=images',
+                        'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd28hgpri8am2if.cloudfront.net%2Fbook_images%2Fonix%2Fcvr9781501110368%2Fit-ends-with-us-9781501110368_hr.jpg&f=1&nofb=1&ipt=a390374bb0822aa466ed2d5ef56bf8e86331140bb0ceb67eff41e88416cd0597&ipo=images',
                         height: 40)),
                 const Text(
                   'It Ends With Us',
@@ -80,68 +80,68 @@ class MainApp extends StatelessWidget {
                             ]))
                       ],
                     )),
-                SizedBox(
-                  height: 380,
-                  child: GridView.count(
-                    crossAxisCount: 2,
-                    mainAxisSpacing: 14,
-                    crossAxisSpacing: 14,
-                    children: [
-                      const DataBlob(
-                          backgroundColor: Color.fromARGB(255, 255, 154, 98),
-                          title: 'TIME',
-                          content: DataBlobTextContent(
-                            icon: Icons.watch_later_outlined,
-                            bigText: '6:24',
-                            content:
-                                'Global avg. read time for your progress 7:28',
-                            boldText: '23% faster',
-                          )),
-                      const DataBlob(
-                          backgroundColor: Color.fromARGB(255, 182, 242, 106),
-                          title: 'STREAK',
-                          content: DataBlobTextContent(
-                            icon: Icons.bolt_rounded,
-                            bigText: '7',
-                            content:
-                                'Day streak, come back tomorrow to keep it up!',
-                            boldText: '19% more consistent',
-                          )),
-                      const DataBlob(
-                          backgroundColor: Color.fromARGB(255, 201, 159, 255),
-                          title: 'LEVEL',
-                          content: DataBlobTextContent(
-                            icon: Icons.donut_large_rounded,
-                            bigText: '2',
-                            content: '145 reader points to level up!',
-                            boldText: 'Top 5% for this book',
-                          )),
-                      DataBlob(
-                          backgroundColor:
-                              const Color.fromARGB(255, 148, 218, 251),
-                          title: 'BADGES',
-                          content: Expanded(
-                              child: Padding(
-                            padding: const EdgeInsets.only(top: 10),
-                            child: GridView.count(
-                              crossAxisCount: 3,
-                              mainAxisSpacing: 3,
-                              children: const [
-                                Icon(Icons.lightbulb_outline_rounded, size: 32),
-                                Icon(Icons.check_circle_outline_rounded,
-                                    size: 32),
-                                Icon(Icons.star_outline_rounded, size: 32),
-                                Icon(Icons.hourglass_empty_rounded, size: 32),
-                                Icon(Icons.book_outlined, size: 32),
-                                Icon(Icons.thumb_up_alt_outlined, size: 32)
-                              ],
-                            ),
-                          ))),
-                    ],
-                  ),
+                GridView.count(
+                  physics: const NeverScrollableScrollPhysics(),
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 14,
+                  shrinkWrap: true,
+                  crossAxisSpacing: 14,
+                  children: [
+                    const DataBlob(
+                        backgroundColor: Color.fromARGB(255, 255, 154, 98),
+                        title: 'TIME',
+                        content: DataBlobTextContent(
+                          icon: Icons.watch_later_outlined,
+                          bigText: '6:24',
+                          content:
+                              'Global avg. read time for your progress 7:28',
+                          boldText: '23% faster',
+                        )),
+                    const DataBlob(
+                        backgroundColor: Color.fromARGB(255, 182, 242, 106),
+                        title: 'STREAK',
+                        content: DataBlobTextContent(
+                          icon: Icons.bolt_rounded,
+                          bigText: '7',
+                          content:
+                              'Day streak, come back tomorrow to keep it up!',
+                          boldText: '19% more consistent',
+                        )),
+                    const DataBlob(
+                        backgroundColor: Color.fromARGB(255, 201, 159, 255),
+                        title: 'LEVEL',
+                        content: DataBlobTextContent(
+                          icon: Icons.donut_large_rounded,
+                          bigText: '2',
+                          content: '145 reader points to level up!',
+                          boldText: 'Top 5% for this book',
+                        )),
+                    DataBlob(
+                        backgroundColor:
+                            const Color.fromARGB(255, 148, 218, 251),
+                        title: 'BADGES',
+                        content: Expanded(
+                            child: Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: GridView.count(
+                            crossAxisCount: 3,
+                            mainAxisSpacing: 3,
+                            children: const [
+                              Icon(Icons.lightbulb_outline_rounded, size: 32),
+                              Icon(Icons.check_circle_outline_rounded,
+                                  size: 32),
+                              Icon(Icons.star_outline_rounded, size: 32),
+                              Icon(Icons.hourglass_empty_rounded, size: 32),
+                              Icon(Icons.book_outlined, size: 32),
+                              Icon(Icons.thumb_up_alt_outlined, size: 32)
+                            ],
+                          ),
+                        ))),
+                  ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 12, bottom: 24),
+                Container(
+                  margin: const EdgeInsets.only(top: 10),
+                  padding: const EdgeInsets.symmetric(vertical: 12),
                   child: Row(
                     children: [
                       Expanded(
